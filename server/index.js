@@ -17,9 +17,12 @@ const training = readCsv("training_source.csv");
 const normalized = readCsv("normalized_output.csv");
 
 const detailsByKey = new Map(
-  normalized.map(row => [`${row.museum_index}:${row["Museum Object Id"]}`, row])
+  normalized.map(row => [
+    String(row["Museum Object Id"]),
+    row
+  ])
 );
-
+console.log("details " + JSON.stringify(detailsByKey));
 const supportedInstruments = new Set(["Pakhawaj", "Been", "Manjira"]);
 
 const parseInstruments = (value = "") => {
@@ -31,7 +34,8 @@ const parseInstruments = (value = "") => {
 };
 
 const paintings = training.map(row => {
-  const details = detailsByKey.get(`${row.museum_index}:${row.id}`) || {};
+  const details =
+    detailsByKey.get(String(row.id)) || {};
   return {
     id: String(row.id),
     museum: row.museum_index,
@@ -78,6 +82,7 @@ app.get("/api/instruments", (_req, res) => {
 app.get("/api/paintings/:museum/:id", (req, res) => {
   const painting = paintings.find(p => p.museum === req.params.museum && p.id === req.params.id);
   if (!painting) return res.status(404).json({ error: "Painting not found" });
+  console.log(painting)
   res.json(painting);
 });
 
