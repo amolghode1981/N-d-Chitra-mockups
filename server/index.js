@@ -73,10 +73,20 @@ app.get("/api/paintings", (req, res) => {
 
 app.get("/api/instruments", (_req, res) => {
   const counts = {};
-  paintings.forEach(p => p.instruments.forEach(i => counts[i] = (counts[i] || 0) + 1));
-  res.json(Object.entries(counts)
-    .map(([name, count]) => ({ name, count }))
-    .sort((a, b) => a.name.localeCompare(b.name)));
+
+  paintings.forEach(p =>
+    p.instruments.forEach(i => {
+      counts[i] = (counts[i] || 0) + 1;
+    })
+  );
+
+  const order = ["Pakhawaj", "Manjira", "Been"];
+
+  res.json(
+    Object.entries(counts)
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => order.indexOf(a.name) - order.indexOf(b.name))
+  );
 });
 
 app.get("/api/paintings/:museum/:id", (req, res) => {
