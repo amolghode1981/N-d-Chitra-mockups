@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap');
+:root{font-family:"DM Sans",sans-serif;color:#29251f;background:#f4f0e7;font-synthesis:none}*{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}.app{min-height:100vh}header{height:74px;border-bottom:1px solid #d8d0c2;display:flex;align-items:center;padding:0 5vw;gap:28px;background:#f4f0e7;position:sticky;top:0;z-index:5}.brand{font-family:"Libre Caslon Display",serif;font-size:25px}.tagline{font-size:12px;color:#766d60;border-left:1px solid #cfc6b7;padding-left:28px}main{max-width:1320px;margin:auto;padding:54px 5vw 90px}.home{min-height:calc(100vh - 220px);display:flex;flex-direction:column;justify-content:center}.hero{max-width:800px;margin-bottom:60px}.eyebrow,.small{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#8a5a3b;font-weight:600}.hero h1,.pageTitle h1,.objectHeader h1{font-family:"Libre Caslon Display",serif;font-weight:400}.hero h1{font-size:clamp(72px,10vw,140px);line-height:.8;margin:20px 0 28px}.hero p{font-family:"Libre Caslon Display",serif;font-size:25px;line-height:1.45;max-width:680px;color:#5f574c}.choices{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #cfc6b7;border-bottom:1px solid #cfc6b7}.choice{padding:30px 34px 34px 0}.choice+ .choice{border-left:1px solid #cfc6b7;padding-left:34px}.choice span{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#8a5a3b}.choice h2{font-family:"Libre Caslon Display";font-size:30px;font-weight:400;margin:10px 0}.choice p{color:#766d60}.choice b{font-size:13px;font-weight:600}.choice:hover h2{color:#8a5a3b}.back{display:inline-block;font-size:13px;color:#766d60;margin-bottom:35px}.pageTitle{margin-bottom:45px;max-width:760px}.pageTitle h1{font-size:58px;margin:8px 0}.pageTitle p{color:#766d60}.museumGrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.museumCard{min-height:260px;border:1px solid #d0c7b8;padding:34px;display:flex;align-items:flex-end;gap:30px;background:#eee8dd;transition:.2s}.museumCard:hover{transform:translateY(-3px);background:#e8e0d3}.museumMark{width:90px;height:90px;border:1px solid #8a5a3b;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#8a5a3b;font-family:"Libre Caslon Display";font-size:23px;flex:none}.museumCard h2{font-family:"Libre Caslon Display";font-size:29px;font-weight:400;margin:8px 0}.museumCard p{font-size:13px;color:#766d60}.instrumentGrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #d0c7b8}.instrumentCard{padding:26px 10px 26px 0;border-bottom:1px solid #d0c7b8;min-height:110px}.instrumentCard:nth-child(3n+2),.instrumentCard:nth-child(3n+3){padding-left:25px;border-left:1px solid #d0c7b8}.instrumentCard h3{font-family:"Libre Caslon Display";font-size:25px;font-weight:400;margin:0 0 18px}.instrumentCard span{font-size:12px;color:#766d60}.gallery{columns:3 280px;column-gap:24px}.painting{display:inline-block;width:100%;margin-bottom:35px;break-inside:avoid}.imageWrap{background:#e4ddd1;overflow:hidden}.imageWrap img{width:100%;height:auto;display:block;transition:.3s}.painting:hover img{transform:scale(1.015)}.paintingText{padding:14px 2px}.paintingText h3{font-family:"Libre Caslon Display";font-size:20px;font-weight:400;line-height:1.25;margin:7px 0}.paintingText p{font-size:12px;color:#766d60}.chips{display:flex;flex-wrap:wrap;gap:5px}.chips span{border:1px solid #d2c8b8;border-radius:20px;padding:4px 8px;font-size:10px;color:#685f54}.objectHeader{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}.objectHeader h1{font-size:42px;max-width:800px;margin:8px 0}.objectHeader p{color:#766d60}.external{border:1px solid #8a5a3b;color:#8a5a3b;padding:12px 16px;font-size:12px;white-space:nowrap}.viewer{border:1px solid #d0c7b8;background:white}.iframeNote{padding:10px 14px;background:#e9e2d7;font-size:11px}.iframeNote span{color:#766d60;margin-left:10px}.viewer iframe{width:100%;height:72vh;border:0;display:block}@media(max-width:750px){.tagline{display:none}.museumGrid,.choices{grid-template-columns:1fr}.choice+.choice{border-left:0;border-top:1px solid #cfc6b7;padding-left:0}.instrumentGrid{grid-template-columns:1fr}.instrumentCard:nth-child(n){padding-left:0;border-left:0}.objectHeader{display:block}.external{display:inline-block;margin-top:15px}.hero h1{font-size:70px}.pageTitle h1{font-size:44px}}
+.infoLayout{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}.infoLayout ul{padding-left:20px}@media(max-width:800px){.infoLayout{grid-template-columns:1fr}}
+.imageViewer .zoomToolbar {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+}
+
+.imageViewer:hover .zoomToolbar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.zoomButton {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.92);
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    transition: background 0.15s ease;
+}
+
+.zoomButton:hover {
+    background: #f3f3f3;
+}
