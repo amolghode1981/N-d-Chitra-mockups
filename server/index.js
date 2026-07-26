@@ -22,7 +22,8 @@ const detailsByKey = new Map(
     row
   ])
 );
-console.log("details " + JSON.stringify(detailsByKey));
+
+
 const supportedInstruments = new Set(["Pakhawaj", "Been", "Manjira"]);
 
 const parseInstruments = (value = "") => {
@@ -43,9 +44,9 @@ const paintings = training.map(row => {
     imageUrl: row.image_url,
     sourceUrl: details["Source Url"] || "",
     approxDate: details["Approx Date"] || "",
+    comments: details["comments"] || "",
     dynasty: details["Dynesty"] || "",
     artist: details["Name of the artist if available"] || "",
-    comments: details["Comments"] || "",
     instruments: parseInstruments(row.instruments)
   };
 });

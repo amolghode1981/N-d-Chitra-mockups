@@ -596,11 +596,13 @@ function Painting() {
                         </div>
                     )}
                 </TransformWrapper>
-
                 <div
                     style={{
-                        width: "280px",
+                        width: "380px",
                         marginTop: "16px",
+                        maxHeight: "70vh",
+                        overflowY: "auto",
+                        paddingRight: "8px",
                     }}
                 >
                     <div
@@ -618,15 +620,13 @@ function Painting() {
                     ) : (
                         <>
                             <p>
-                                <strong>Department:</strong> {info.department || "—"}
+                                <strong>Date:</strong>{" "}
+                                {painting.approxDate || info.date || "—"}
                             </p>
 
                             <p>
-                                <strong>Culture:</strong> {info.culture || "—"}
-                            </p>
-
-                            <p>
-                                <strong>Date:</strong> {info.date || "—"}
+                                <strong>Dynasty:</strong>{" "}
+                                {painting.dynasty || "—"}
                             </p>
                         </>
                     )}
@@ -635,13 +635,60 @@ function Painting() {
                         <strong>Object ID:</strong> {painting.id}
                     </p>
 
-                    <h3>Instruments</h3>
+                    <h3
+                        style={{
+                            marginTop: "1.5rem",
+                            marginBottom: ".5rem",
+                        }}
+                    >
+                        Instruments
+                    </h3>
 
-                    <ul>
+                    <ul
+                        style={{
+                            paddingLeft: "1.2rem",
+                            marginTop: 0,
+                        }}
+                    >
                         {painting.instruments.map((i) => (
                             <li key={i}>{i}</li>
                         ))}
                     </ul>
+
+                    {painting.comments && (
+                        <div
+                            style={{
+                                marginTop: "1.5rem",
+                                width: "100%",
+                                padding: "16px",
+                                background: "#f7f4ef",
+                                border: "1px solid #d9d4ca",
+                                borderRadius: "8px",
+                                boxSizing: "border-box",
+                            }}
+                        >
+                            <h3
+                                style={{
+                                    margin: "0 0 0.75rem 0",
+                                    fontSize: "1rem",
+                                    fontWeight: 600,
+                                }}
+                            >
+                                Musician's Reading
+                            </h3>
+
+                            <p
+                                style={{
+                                    margin: 0,
+                                    lineHeight: 1.7,
+                                    fontSize: "1rem",
+                                    textAlign: "left",
+                                }}
+                            >
+                                {painting.comments}
+                            </p>
+                        </div>
+                    )}
 
                     <p style={{ marginTop: "1.5rem" }}>
                         <a
@@ -650,7 +697,7 @@ function Painting() {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            Open Museum Page
+                            Open Museum Page ↗
                         </a>
                     </p>
                 </div>

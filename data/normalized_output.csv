@@ -1,17 +1,17 @@
-Collection,Museum Object Id,Source Url,Approx Date,Dynesty,Pakhawaj,Manjira,Been
-Metropolitan museum newyork,50939,https://www.metmuseum.org/art/collection/search/50939,1649,Rajput,1,1,1
-Metropolitan museum newyork,38007,https://www.metmuseum.org/art/collection/search/38007,1767,Rajput,1,0,0
-Metropolitan museum newyork,64533,https://www.metmuseum.org/art/collection/search/64533,1770,Rajput,1,0,1
-Metropolitan museum newyork,37882,https://www.metmuseum.org/art/collection/search/37882,1640,Malwa,1,1,0
-Metropolitan museum newyork,37871,https://www.metmuseum.org/art/collection/search/37871,1650,Rajput,0,0,1
-Metropolitan museum newyork,74883,https://www.metmuseum.org/art/collection/search/74883,1149,Jain,1,0,0
-Metropolitan museum newyork,58449,https://www.metmuseum.org/art/collection/search/58449,1610,Rajput,1,1,0
-Metropolitan museum newyork,58449,https://www.metmuseum.org/art/collection/search/58449,1610,Rajput,1,1,0
-The cleveland museum of art,1962.279.105.a,https://www.clevelandart.org/art/1962.279.105.a,1560,Mughal,0,0,1
-The cleveland museum of art,1962.279.108.b,https://www.clevelandart.org/art/1962.279.108.b,1560,Mughal,0,0,1
-The cleveland museum of art,1962.279.110.b,https://www.clevelandart.org/art/1962.279.110.b,1560,Mughal,0,0,1
-The cleveland museum of art,1971.79,https://www.clevelandart.org/art/1971.79,1630,Mughal,0,0,1
-The cleveland museum of art,1931.451,https://www.clevelandart.org/art/1931.451,1695,Rajput,1,1,1
-The cleveland museum of art,1975.9,https://www.clevelandart.org/art/1975.9,1800,Pahadi,1,1,0
-The cleveland museum of art,1971.88,https://www.clevelandart.org/art/1971.88,1600,Mughal,1,1,0
-The cleveland museum of art,2011.141,https://www.clevelandart.org/art/2011.141,1736,Rajput,1,1,1
+Collection,Museum Object Id,Source Url,Approx Date,Dynesty,Pakhawaj,Manjira,Been,comments
+Metropolitan museum newyork,50939,https://www.metmuseum.org/art/collection/search/50939,1649,Rajput,1,1,1, This is a Rāgmala depiction of Vasant Ragini. There are 4 musicians one of them is playing the Pakhawaj one is playing the Manjira and one is playing the Been. The other two musicians are clapping their hands.
+Metropolitan museum newyork,38007,https://www.metmuseum.org/art/collection/search/38007,1767,Rajput,1,0,0, A painting of Maharana Ari Singh with his courtiers being entertained at the Jagniwas Water Palace. There is one musician playing the Pakhawaj. The foreground shows a set of dancers accompanied by musicians playing sārangi and tablā. The pakhāwaj player is depicted in the lower part of the painting.
+Metropolitan museum newyork,64533,https://www.metmuseum.org/art/collection/search/64533,1770,Rajput,1,0,1, A painting of Maharaja Bijay Singh in his harem. There are two musicians one is playing the Pakhawaj and the other is playing the Been. The musician playing the Been is depicted in the lower part of the painting.
+Metropolitan museum newyork,37882,https://www.metmuseum.org/art/collection/search/37882,1640,Malwa,1,1,0, Yet another Rāgmala depiction of Vasant Ragini. There are two musicians one is playing the pakhāwaj and the other is playing the Manjirā.
+Metropolitan museum newyork,37871,https://www.metmuseum.org/art/collection/search/37871,1650,Rajput,0,0,1, A rāgmala depiction of Shri Raga. There are 2 musicians playing Vīṇā. Though both Vīṇā are of different types. The musician on the right of the viewer is playing a vīṇā with a single gourd resonator while the other one is playing a vīṇā with two gourd resonators.
+Metropolitan museum newyork,74883,https://www.metmuseum.org/art/collection/search/74883,1149,Jain,1,0,0, Probably one of the earliest depiction of a protoinstrument of pakhāwaj player in Indian miniature painting. The musician on the left of the viewer is seen playing the pakhāwaj.
+Metropolitan museum newyork,58449,https://www.metmuseum.org/art/collection/search/58449,1610,Rajput,1,1,0, Here the tuning pastes are visible on both the drumheads of the pakhāwaj.
+Metropolitan museum newyork,58449,https://www.metmuseum.org/art/collection/search/58449,1610,Rajput,1,1,0, Here the tuning pastes are visible on both the drumheads of the pakhāwaj.
+The cleveland museum of art,1962.279.105.a,https://www.clevelandart.org/art/1962.279.105.a,1560,Mughal,0,0,1, All kinds of musical instruments are visible in this painting.
+The cleveland museum of art,1962.279.108.b,https://www.clevelandart.org/art/1962.279.108.b,1560,Mughal,0,0,1,
+The cleveland museum of art,1962.279.110.b,https://www.clevelandart.org/art/1962.279.110.b,1560,Mughal,0,0,1,
+The cleveland museum of art,1971.79,https://www.clevelandart.org/art/1971.79,1630,Mughal,0,0,1,
+The cleveland museum of art,1931.451,https://www.clevelandart.org/art/1931.451,1695,Rajput,1,1,1,
+The cleveland museum of art,1975.9,https://www.clevelandart.org/art/1975.9,1800,Pahadi,1,1,0, Rāgmala depiction of Hindola Raga. Pakhāwaj and Tablā players are visible in the painting.
+The cleveland museum of art,1971.88,https://www.clevelandart.org/art/1971.88,1600,Mughal,1,1,0, black tuning paste (Syahi) is visible on the righthand drumhead of the pakhāwaj.
+The cleveland museum of art,2011.141,https://www.clevelandart.org/art/2011.141,1736,Rajput,1,1,1,
