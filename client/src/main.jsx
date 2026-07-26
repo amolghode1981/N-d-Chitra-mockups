@@ -30,7 +30,7 @@ function Shell({ children }) {
         <div className="app">
             <header>
                 <Link className="brand" to="/">
-                    Nād-Chitra
+                    Nāda-Chitra
                 </Link>
 
                 <span className="tagline">
@@ -51,7 +51,7 @@ function Home() {
                     A visual research prototype
                 </div>
 
-                <h1>Nād-Chitra</h1>
+                <h1>Nāda-Chitra</h1>
 
                 <p>
                     Explore musical instruments depicted in Indian
@@ -99,7 +99,7 @@ function Page({ title, intro, children }) {
     return (
         <>
             <Link className="back" to="/">
-                ← Nād-Chitra
+                ← Nāda-Chitra
             </Link>
 
             <div className="pageTitle">

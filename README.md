@@ -1,4 +1,4 @@
-# Nād-Chitra — mock-up
+# Nāda-Chitra — mock-up
 
 A deliberately simple proof-of-concept built with React, JavaScript and Node/Express.
 
@@ -16,7 +16,7 @@ Open the Vite URL printed in the terminal (normally http://localhost:5173).
 
 ## What it does
 
-- Home/splash page for **Nād-Chitra**
+- Home/splash page for **Nāda-Chitra**
 - Browse the two collections by museum
 - Browse instrument classifications across both museums
 - Painting thumbnails come from `training_source.csv`

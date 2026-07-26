@@ -103,4 +103,4 @@ if (fs.existsSync(clientDist)) {
   app.get("*", (_req, res) => res.sendFile(path.join(clientDist, "index.html")));
 }
 
-app.listen(3001, () => console.log("Nād-Chitra server running on http://localhost:3001"));
+app.listen(3001, () => console.log("Nāda-Chitra server running on http://localhost:3001"));
