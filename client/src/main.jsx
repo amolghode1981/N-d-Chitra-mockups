@@ -330,12 +330,45 @@ function getBestImage(
         );
     }
 
-    return (
-        metadata?.data?.images?.web?.url ||
-        metadata?.data?.images?.print?.url ||
-        metadata?.data?.images?.full?.url ||
-        fallback
+    const imageGroups = [
+        metadata?.data?.images,
+        ...(Array.isArray(metadata?.data?.alternate_images)
+            ? metadata.data.alternate_images
+            : []),
+    ].filter(Boolean);
+
+    const jpegCandidates = imageGroups.flatMap((group) => {
+        return ["web", "print", "full"]
+            .map((size) => group?.[size])
+            .filter((entry) => entry?.url)
+            .filter((entry) => /\.jpe?g$/i.test(entry.url))
+            .map((entry) => ({
+                url: entry.url,
+                width: Number(entry.width || 0),
+                height: Number(entry.height || 0),
+            }));
+    });
+
+    const bestJpeg = jpegCandidates.reduce(
+        (best, candidate) => {
+            const bestScore = best
+                ? Math.max(best.width, best.height)
+                : 0;
+            const candidateScore = Math.max(
+                candidate.width,
+                candidate.height
+            );
+
+            if (!best || candidateScore > bestScore) {
+                return candidate;
+            }
+
+            return best;
+        },
+        null
     );
+
+    return bestJpeg?.url || fallback;
 }
 
 function normalizeMetadata(
@@ -418,12 +451,17 @@ function Painting() {
 
     useEffect(() => {
         setLoadingPainting(true);
+        console.log("Fetching painting data for:", museum, id);
 
         fetch(`${API}/paintings/${museum}/${id}`)
             .then((r) => r.json())
             .then((data) => {
+                console.log("Painting data loaded:", data);
                 setPainting(data);
                 setLoadingPainting(false);
+            })
+            .catch((err) => {
+                console.error("Failed to load painting data:", err);
             });
     }, [museum, id]);
 
@@ -439,8 +477,10 @@ function Painting() {
                 painting.id
             );
 
+            console.log("Metadata loaded:", json);
             setMetadata(json);
         } catch (e) {
+            console.error("Metadata load failed:", e);
             setError(true);
         } finally {
             setLoadingMetadata(false);
@@ -472,6 +512,10 @@ function Painting() {
             metadata,
             painting.imageUrl
         );
+
+    console.log("Selected image URL:", image);
+    window.__lastSelectedImage = image;
+
     const pageStyle = {
         height: debug ? "auto" : "calc(100vh - 80px)",
         overflow: debug ? "auto" : "hidden",
